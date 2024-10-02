@@ -2,14 +2,23 @@ import React from 'react';
 import Header from './components/Header';  // Headerコンポーネントのインポート
 import Footer from './components/Footer';  // Footerコンポーネントのインポート
 import { Container, Typography, Box, Button, Grid, TextField } from '@mui/material';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';  // ビューに入ったときのアニメーション用
 
 function App() {
+  // 各セクションにアニメーションを適用するためのフックを使用
+  const [heroRef, heroInView] = useInView({ triggerOnce: true });
+  const [aboutRef, aboutInView] = useInView({ triggerOnce: true });
+  const [servicesRef, servicesInView] = useInView({ triggerOnce: true });
+  const [contactRef, contactInView] = useInView({ triggerOnce: true });
+
   return (
     <div>
       <Header />
 
       {/* ヒーローセクション */}
       <Box
+        ref={heroRef}
         sx={{
           position: 'relative',
           height: '600px',
@@ -21,6 +30,9 @@ function App() {
           alignItems: 'center',
           color: 'white',
           textAlign: 'center',
+          opacity: heroInView ? 1 : 0,
+          transform: heroInView ? 'translateY(0)' : 'translateY(50px)',
+          transition: 'opacity 1s ease, transform 1s ease',
         }}
       >
         <Box
@@ -48,7 +60,16 @@ function App() {
       </Box>
 
       {/* 会社概要セクション */}
-      <Box sx={{ py: 8, bgcolor: 'background.default' }}>
+      <Box
+        ref={aboutRef}
+        sx={{
+          py: 8,
+          bgcolor: 'background.default',
+          opacity: aboutInView ? 1 : 0,
+          transform: aboutInView ? 'translateY(0)' : 'translateY(50px)',
+          transition: 'opacity 1s ease, transform 1s ease',
+        }}
+      >
         <Container>
           <Typography variant="h4" component="h2" gutterBottom align="center">
             About Us
@@ -61,6 +82,7 @@ function App() {
 
       {/* サービスセクション */}
       <Box
+        ref={servicesRef}
         sx={{
           position: 'relative',
           backgroundImage: 'url(https://images.unsplash.com/photo-1515378791036-0648a3ef77b2)',
@@ -68,6 +90,9 @@ function App() {
           backgroundPosition: 'center',
           py: 8,
           color: 'white',
+          opacity: servicesInView ? 1 : 0,
+          transform: servicesInView ? 'translateY(0)' : 'translateY(50px)',
+          transition: 'opacity 1s ease, transform 1s ease',
         }}
       >
         <Box
@@ -122,13 +147,17 @@ function App() {
 
       {/* お問い合わせセクション */}
       <Box
+        ref={contactRef}
         sx={{
           position: 'relative',
-          backgroundImage: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c)',  // フリー素材（チームワーク）
+          backgroundImage: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           py: 8,
           color: 'white',
+          opacity: contactInView ? 1 : 0,
+          transform: contactInView ? 'translateY(0)' : 'translateY(50px)',
+          transition: 'opacity 1s ease, transform 1s ease',
         }}
       >
         <Box
