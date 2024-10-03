@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/newtrybe_homepage/static/js/main.c7ae094e.js",
+    "main.js": "/newtrybe_homepage/static/js/main.ac728d4c.js",
     "index.html": "/newtrybe_homepage/index.html",
-    "main.c7ae094e.js.map": "/newtrybe_homepage/static/js/main.c7ae094e.js.map"
+    "main.ac728d4c.js.map": "/newtrybe_homepage/static/js/main.ac728d4c.js.map"
   },
   "entrypoints": [
-    "static/js/main.c7ae094e.js"
+    "static/js/main.ac728d4c.js"
   ]
 }
