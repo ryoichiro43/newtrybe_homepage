@@ -53,7 +53,7 @@ const Footer = () => {
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <Link
-                to="/"
+                to="/newtrybe_homepage/"
                 style={{ textDecoration: 'none', color: 'inherit', marginBottom: '8px' }}
                 sx={{
                   transition: 'transform 0.3s ease',
@@ -63,7 +63,7 @@ const Footer = () => {
                 Home
               </Link>
               <Link
-                to="/about"
+                to="/newtrybe_homepage/about"
                 style={{ textDecoration: 'none', color: 'inherit', marginBottom: '8px' }}
                 sx={{
                   transition: 'transform 0.3s ease',
@@ -73,7 +73,7 @@ const Footer = () => {
                 About Us
               </Link>
               <Link
-                to="/services"
+                to="/newtrybe_homepage/services"
                 style={{ textDecoration: 'none', color: 'inherit', marginBottom: '8px' }}
                 sx={{
                   transition: 'transform 0.3s ease',
@@ -83,7 +83,7 @@ const Footer = () => {
                 Services
               </Link>
               <Link
-                to="/contact"
+                to="/newtrybe_homepage/contact"
                 style={{ textDecoration: 'none', color: 'inherit' }}
                 sx={{
                   transition: 'transform 0.3s ease',
