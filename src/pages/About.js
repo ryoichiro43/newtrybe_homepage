@@ -124,7 +124,7 @@ const About = () => {
                     sx={{ width: 100, height: 100, mb: 2 }}
                   />
                   <Typography variant="h6" gutterBottom>
-                    ジョン・ドゥ
+                    千葉太河
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
                     CEO & 創業者
@@ -142,15 +142,16 @@ const About = () => {
                     sx={{ width: 100, height: 100, mb: 2 }}
                   />
                   <Typography variant="h6" gutterBottom>
-                    ジェーン・スミス
+                    蓑羽諒一朗
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
-                    CTO
+                  CEO & 創業者
                   </Typography>
                 </CardContent>
               </Card>
             </Grid>
             {/* メンバー3 */}
+        {/*
             <Grid item xs={12} sm={6} md={4}>
               <Card sx={{ boxShadow: '0px 4px 16px rgba(0, 0, 0, 0.1)' }}>
                 <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -160,7 +161,7 @@ const About = () => {
                     sx={{ width: 100, height: 100, mb: 2 }}
                   />
                   <Typography variant="h6" gutterBottom>
-                    エミリー・デイビス
+                    
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
                     COO
@@ -168,6 +169,7 @@ const About = () => {
                 </CardContent>
               </Card>
             </Grid>
+            */}
           </Grid>
         </Box>
 
