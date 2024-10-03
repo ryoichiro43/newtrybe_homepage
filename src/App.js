@@ -12,10 +12,10 @@ function App() {
     <Router>
       <Header />  {/* どのページでも表示されるヘッダー */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/newtrybe_homepage/" element={<Home />} />
+        <Route path="/newtrybe_homepage/about" element={<About />} />
+        <Route path="/newtrybe_homepage/services" element={<Services />} />
+        <Route path="/newtrybe_homepage/contact" element={<Contact />} />
       </Routes>
       <Footer />  {/* どのページでも表示されるフッター */}
     </Router>

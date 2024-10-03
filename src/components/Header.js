@@ -79,7 +79,7 @@ const Header = () => {
             <Button
               color="inherit"
               component={Link}
-              to="/"
+              to="/newtrybe_homepage/"
               sx={{
                 transition: 'transform 0.3s ease',
                 '&:hover': {
@@ -92,7 +92,7 @@ const Header = () => {
             <Button
               color="inherit"
               component={Link}
-              to="/about"
+              to="/newtrybe_homepage/about"
               sx={{
                 transition: 'transform 0.3s ease',
                 '&:hover': {
@@ -105,7 +105,7 @@ const Header = () => {
             <Button
               color="inherit"
               component={Link}
-              to="/services"
+              to="/newtrybe_homepage/services"
               sx={{
                 transition: 'transform 0.3s ease',
                 '&:hover': {
@@ -118,7 +118,7 @@ const Header = () => {
             <Button
               color="inherit"
               component={Link}
-              to="/contact"
+              to="/newtrybe_homepage/contact"
               sx={{
                 transition: 'transform 0.3s ease',
                 '&:hover': {
