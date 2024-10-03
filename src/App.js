@@ -72,7 +72,7 @@ function App() {
       >
         <Container>
           <Typography variant="h4" component="h2" gutterBottom align="center">
-            About Us
+            ソリューション
           </Typography>
           <Typography variant="body1" paragraph align="center">
             We are a leading IT company, offering top-notch technology solutions. Our team of experts is dedicated to driving innovation and delivering exceptional service to our clients worldwide.
