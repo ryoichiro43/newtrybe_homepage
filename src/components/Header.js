@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, IconButton, Button, Box, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';  // React RouterのLinkを使用
 import { useTheme } from '@mui/material/styles';
-import { Slide, Fade } from '@mui/material';
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -23,17 +23,17 @@ const Header = () => {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {['Home', 'About Us', 'Services', 'Contact'].map((text, index) => (
+        {['Home', 'About', 'Services', 'Contact'].map((text, index) => (
           <ListItem
             button
             key={text}
-            component="a"
-            href={`#${text.toLowerCase().replace(' ', '')}`}
+            component={Link}
+            to={`/${text.toLowerCase()}`}
             sx={{
-              transition: 'all 0.3s ease',   // アニメーション追加
+              transition: 'all 0.3s ease',
               '&:hover': {
-                backgroundColor: theme.palette.primary.light, // ホバー時の背景色変更
-                transform: 'scale(1.05)', // ホバー時に少し大きく
+                backgroundColor: theme.palette.primary.light,
+                transform: 'scale(1.05)',
               },
             }}
           >
@@ -54,9 +54,9 @@ const Header = () => {
             component="div"
             sx={{
               flexGrow: 1,
-              transition: 'transform 0.5s ease', // アニメーション追加
+              transition: 'transform 0.5s ease',
               '&:hover': {
-                // ロゴホバー時に拡大
+                transform: 'scale(1.1)', // ロゴホバー時に拡大
               },
             }}
           >
@@ -78,11 +78,12 @@ const Header = () => {
           <Box sx={{ display: { xs: 'none', sm: 'block' }, transition: 'all 0.5s ease' }}>
             <Button
               color="inherit"
-              href="#home"
+              component={Link}
+              to="/"
               sx={{
                 transition: 'transform 0.3s ease',
                 '&:hover': {
-                  transform: 'scale(1.1)', // ナビゲーションリンクのホバーアニメーション
+                  transform: 'scale(1.1)',
                 },
               }}
             >
@@ -90,7 +91,8 @@ const Header = () => {
             </Button>
             <Button
               color="inherit"
-              href="#about"
+              component={Link}
+              to="/about"
               sx={{
                 transition: 'transform 0.3s ease',
                 '&:hover': {
@@ -102,7 +104,8 @@ const Header = () => {
             </Button>
             <Button
               color="inherit"
-              href="#services"
+              component={Link}
+              to="/services"
               sx={{
                 transition: 'transform 0.3s ease',
                 '&:hover': {
@@ -114,7 +117,8 @@ const Header = () => {
             </Button>
             <Button
               color="inherit"
-              href="#contact"
+              component={Link}
+              to="/contact"
               sx={{
                 transition: 'transform 0.3s ease',
                 '&:hover': {
@@ -133,7 +137,6 @@ const Header = () => {
         anchor="left"
         open={drawerOpen}
         onClose={toggleDrawer(false)}
-        
       >
         {drawerItems}
       </Drawer>
